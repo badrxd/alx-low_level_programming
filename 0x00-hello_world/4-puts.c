@@ -1,6 +1,7 @@
 #include<stdio.h>
 /**
-* main function
+* main function - print 
+* return: return number 0
 */
 int main(void)
 {
