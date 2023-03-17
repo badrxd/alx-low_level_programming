@@ -14,5 +14,5 @@ int main(void)
 		putchar(b);
 		b++;
 	}
-	return(0)
+	return(0);
 }
