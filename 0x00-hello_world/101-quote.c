@@ -1,7 +1,6 @@
 #include<stdio.h>
 /**
  * main - function for quote
- *
  * Return: return 1
  */
 int main(void)
