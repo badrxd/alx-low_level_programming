@@ -2,12 +2,11 @@
 #include <ctype.h>
 /**
  * main - fun 
- *
+ * @a: v
  * Return: return 0
  */
-int main(void)
+int main(char a)
 {
-        char a = 'B';
         char b;
         
         b = tolower(a);
