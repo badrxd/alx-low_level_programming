@@ -9,14 +9,10 @@ int main(void)
 	int a;
 
 	a = 97;
-	do {
-		if (a == 103 || a == 90)
-		{
-			a++;
-			continue;
-		{
-		putchar(a);
+	while {
+		if (a != 101 || a != 113)
+			putchar(a);
 		a++;
-	} while (a < 123);
+	{
 	return (0);
 }
