@@ -1,15 +1,18 @@
 #include <stdio.h>
-#include <ctype.h>
 /**
  * main - fun 
  * @a: v
+ *
  * Return: return 0
  */
-int main(char a)
+int main(void)
 {
-        char b;
-        
-        b = tolower(a);
-        putchar(b);
-        return(0);
+	int b;
+
+	b = 97;
+	while (b < 123)
+       	{
+		putchar(b);
+		b++
+	}
 }
