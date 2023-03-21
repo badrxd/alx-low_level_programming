@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 * _islower - fun
 * @c: variable
@@ -7,16 +8,15 @@
 */
 int _islower(int c)
 {
-	int a, b;
+	int a;
 
-	a = _putchar(c);
+	a = putchar(c);
 	if (a >= 97 && a <= 122)
 	{
-		b = 1;
+		return (1);
 	}
 	else
 	{
-		b = 0;
+		return (0);
 	}
-	return (b);
 }
