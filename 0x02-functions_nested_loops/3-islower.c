@@ -1,12 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 /**
-* 
+* _islower - fun
+* @c: variable
 *
+* Return: 0 or 1
 */
 int _islower(int c)
 {
-	int a ,b;
+	int a, b;
 
 	a = _putchar(c);
 	if (a >= 97 && a <= 122)
@@ -15,7 +16,7 @@ int _islower(int c)
 	}
 	else
 	{
-		b = 0
+		b = 0;
 	}
 	return (b);
 }
