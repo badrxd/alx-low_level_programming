@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 * _islower - fun
 * @c: variable
@@ -8,10 +7,7 @@
 */
 int _islower(int c)
 {
-	int a;
-
-	a = putchar(c);
-	if (a >= 97 && a <= 122)
+	if (c >= 97 && c <= 122)
 	{
 		return (1);
 	}
