@@ -1,5 +1,4 @@
 #include "main.h"
-ma
 /**
 * print_line - fun
 * @n: variable
