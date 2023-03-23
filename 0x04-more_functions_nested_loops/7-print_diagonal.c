@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 * print_diagonal - fun
 * @n: variable
@@ -17,11 +16,11 @@ void print_diagonal(int n)
 		{
 			for (b = 0; b <= a; b++)
 			{
-				putchar(' ');
+				_putchar(' ');
 			}
-			putchar(92);
-			putchar('\n');
+			_putchar(92);
+			_putchar('\n');
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
