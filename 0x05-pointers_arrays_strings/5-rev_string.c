@@ -21,6 +21,6 @@ void rev_string(char *s)
 	{
 		if (c[i] == '\0')
 			continue;
-		s[i] = c[i];
+		s[9 - i] = c[i];
 	}
 }
