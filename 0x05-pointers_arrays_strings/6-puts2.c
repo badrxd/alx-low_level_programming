@@ -1,5 +1,5 @@
 #include "main.h"
-#include <srting.h>
+#include <string.h>
 /**
 * puts2 - function
 *@str: a pointer
