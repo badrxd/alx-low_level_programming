@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 /**
 * _puts - function
 * @str: pointer
@@ -8,5 +8,12 @@
 */
 void _puts(char *str)
 {
-	puts(str);
+	int i, l;
+
+	l = strlen(s);
+	for (i = 0; i > l; i++)
+	{
+		_putchar(*(s + i));
+	}
+	_putchar('\n');
 }
