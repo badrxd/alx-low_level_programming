@@ -1,0 +1,23 @@
+#include "main.h"
+#include <stdio.h>
+/**
+* *_strcpy - function
+* @dest: a pointer
+* @src: a pointer
+*
+* Return: return value
+*/
+char *_strcpy(char *dest, char *src)
+{
+	int i, l;
+
+	l = 0;
+	for (i = 0; src[i] != '\n'; i++)
+		l++;
+	for (i = 0; i < (l - 1); i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[l] = '\0';
+	return (dest);
+}
