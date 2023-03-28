@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
 * _puts - function
 * @str: pointer
@@ -11,7 +10,7 @@ void _puts(char *str)
 	int i, l;
 
 	l = 0;
-        for (i = 0; s[i] != '\0'; i++)
+        for (i = 0; str[i] != '\0'; i++)
                 l++;
 	for (i = 0; i < l; i++)
 	{
