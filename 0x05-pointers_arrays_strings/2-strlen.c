@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
 * _strlen - function
 *@s: a pointer
@@ -8,5 +7,10 @@
 */
 int _strlen(char *s)
 {
-	return (strlen(s));
+	int i,l;
+
+	l = 0;
+	for (i = 0; s[i] != '\0'; i++)
+		l++;
+	return (l);
 }
