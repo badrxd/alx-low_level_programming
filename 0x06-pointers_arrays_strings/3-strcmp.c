@@ -23,5 +23,11 @@ int _strcmp(char *s1, char *s2)
 		k++;
 		i++;
 	}
-	return (l - k);
+
+	if ( l > k)
+		return(15);
+	else if (l < k)
+		return (-15);
+	else
+		return(0);
 }
