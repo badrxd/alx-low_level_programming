@@ -3,7 +3,7 @@
 * *string_toupper - fun
 * @a: pointer
 *
-* Return: non
+* Return: a
 */
 char *string_toupper(char *a)
 {
@@ -15,5 +15,5 @@ char *string_toupper(char *a)
 			a[i] = a[i] - 32;
 		i++;
 	}
-	return (n);
+	return (a);
 }
