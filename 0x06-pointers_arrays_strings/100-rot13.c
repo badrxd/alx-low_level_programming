@@ -1,12 +1,12 @@
 #include "main.h"
 /**
-* *leet - fun
+* *rot13 - fun
 * @a: pointer
 *
 * Return: a
 */
 
-char *leet(char *a)
+char *rot13(char *a)
 {
 	int i, l;
 	char b[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
