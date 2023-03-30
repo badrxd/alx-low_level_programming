@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* *cap_string(char *) - fun
+* *cap_string - fun
 * @a: pointer
 *
 * Return: a
