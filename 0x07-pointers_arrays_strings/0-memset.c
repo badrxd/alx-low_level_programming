@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* *_memset - fun
+* _memset - fun
 * @s: array
 * @b: value
 * @n: value of n
