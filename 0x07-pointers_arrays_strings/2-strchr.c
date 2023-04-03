@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*  *_strchr - fun
+* _strchr - fun
 * @s: array
 * @c: value
 *
@@ -17,5 +17,5 @@ char *_strchr(char *s, char c)
 			return (p = s + i);
 		i++;
 	}
-	return ('\0');
+	return (0);
 }
