@@ -4,7 +4,7 @@
 * @dest: array
 * @src: value
 * @n: value
-* Return: s
+* Return: dest
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
