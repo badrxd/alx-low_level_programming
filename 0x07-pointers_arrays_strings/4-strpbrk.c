@@ -1,25 +1,22 @@
 #include "main.h"
 /**
-* _strstr - f
-* @haystack: value
-* @needle: value
-* Return: haystack or 0
+* _strpbrk - f
+* @s: value
+* @accept: value
+* Return: s or 0
 */
-char *_strstr(char *haystack, char *needle)
+char *_strpbrk(char *s, char *accept)
 {
-	while (*haystack)
-	{
-		char *a = haystack;
-		char *b = needle;
+	int i;
 
-		while (*a == *b && *b != '\0')
+	while (*s)
+	{
+		for (i = 0; accept[i] != '\0'; i++)
 		{
-			a++;
-			b++;
+			if (*s == accept[i])
+				return (s);
 		}
-		if (*b == '\0')
-			return (haystack);
-		haystack++;
+		s++;
 	}
 	return (0);
 }
