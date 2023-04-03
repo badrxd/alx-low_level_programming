@@ -3,7 +3,7 @@
 * *_memset - fun
 * @s: array
 * @b: value
-* @n: value
+* @n: value of n
 * Return: s
 */
 char *_memset(char *s, char b, unsigned int n)
