@@ -1,17 +1,24 @@
- #include "main.h"
+#include "main.h"
+#include <stdio.h>
 /**
-* print_chessboard - fun
+* print_diagsums - fun
 * @a: array
-* Return: dest
+* @size: value
+* Return: a
 */
-void print_chessboard(char (*a)[8])
+void print_diagsums(int *a, int size)
 {
-	int i, l;
+	int s1, s2, i;
 
-	for (i = 0; i < 8; i++)
+	s1 = 0;
+	s2 = 0;
+	for (i = 0; i < size; i++)
 	{
-		for (l = 0; l < 8; l++)
-			_putchar(a[i][l]);
-		_putchar('\n');
+		s1 = s1 + a[i * size + i];
 	}
+	for (i = size - 1; i >= 0; i--)
+	{
+		s2 += a[i * size + (size - i - 1)];
+	}
+	printf("%d, %d\n", s1, s2);
 }
