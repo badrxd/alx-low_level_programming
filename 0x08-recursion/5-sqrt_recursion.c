@@ -13,7 +13,7 @@ int _sqrt(int a, int b)
 	}
 	else
 	{
-		if ((b * b) > num)
+		if ((b * b) > a)
 			return (-1);
 		else
 			return (_sqrt(a, b + 1));
