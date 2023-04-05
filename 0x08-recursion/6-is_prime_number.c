@@ -20,7 +20,7 @@ int prime_number(int a, int b)
 	}
 	else
 	{
-		return (b);
+		return (1);
 	}
 }
 
