@@ -8,11 +8,14 @@
 */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
+	int a;
+	
+	if (argc < 2)
 	{
-		printf("%s\n", argv[i]);
+		printf("Error\n");
+		return (1);
 	}
+	a = (*argv[1] - '0') * (*argv[2] - '0');
+	printf("%d\n", a);
 	return (0);
 }
