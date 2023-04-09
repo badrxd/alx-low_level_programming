@@ -28,6 +28,8 @@ int main(int argc, char **argv)
 	{
 		coins = coins + (cents / c_array[i]);
 		cents = cents % c_array[i];
+		if (cents == 0)
+			break;
 	}
 	printf("%d\n", coins);
 	return (0);
