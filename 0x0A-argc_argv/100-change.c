@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		return (0);
 	}
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 5 && cents >= 0; i++)
 	{
 	while (cents >= c_array[i])
 	{
