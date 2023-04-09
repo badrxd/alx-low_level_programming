@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	coins = 0;
 	cents = atoi(argv[1]);
-	if (argc != 2)
+	if (argc != 2 || !isdigit(*argv[1]))
 	{
 		printf("Error\n");
 		return (1);
@@ -28,8 +28,6 @@ int main(int argc, char **argv)
 	{
 		coins = coins + (cents / c_array[i]);
 		cents = cents % c_array[i];
-		if (cents == 0)
-			break;
 	}
 	printf("%d\n", coins);
 	return (0);
