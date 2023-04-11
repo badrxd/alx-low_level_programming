@@ -4,7 +4,7 @@
 * create_array - fun
 * @size: variable
 * @c: variable
-* Return: non
+* Return: ptr
 */
 char *create_array(unsigned int size, char c)
 {
