@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* _strdup( - fun
+* _strdup - fun
 * @str: variable
-* 
+*
 * Return: ptr
 */
 char *_strdup(char *str)
