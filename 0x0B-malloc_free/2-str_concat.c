@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* str_concat( - fun
+* str_concat - fun
 * @s1: variable
 * @s2: variable
 * Return: ptr
@@ -20,9 +20,9 @@ char *str_concat(char *s1, char *s2)
 		k++;
 	}
 	while (s2[m] && s2)
-        {
-                m++;
-        }
+	{
+		m++;
+	}
 	i = i + j;
 	ptr = malloc(sizeof(char) * (k + m + 1));
 	if (ptr == NULL)
