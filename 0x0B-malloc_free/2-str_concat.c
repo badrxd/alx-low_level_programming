@@ -9,12 +9,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int i, j, k, m;
+	unsigned int i = 0, j = 0, k = 0, m = 0;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	m = 0;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
@@ -33,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	if (s1)
 	{
-	while ( i < k)
+	while (i < k)
 	{
 		ptr[i] = s1[i];
 		i++;
