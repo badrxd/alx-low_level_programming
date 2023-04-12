@@ -1,4 +1,5 @@
-
+#include "main.h"
+#include <stdlib.h>
 /**
 * create_array - fun
 * @size: variable
