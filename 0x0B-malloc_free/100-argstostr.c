@@ -21,18 +21,19 @@ char *argstostr(int ac, char **av)
 			len1++;
 			j++;
 		}
+		len1++;
 		i++;
 	}
-	arr = malloc((len1 + ac + 1) * sizeof(char));
+	arr = malloc((len1 + 1) * sizeof(char));
 	if (!arr)
 	{
 		free(arr);
 		return (NULL);
 	}
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		j = 0;
-		while (av[i][j] && k <= (len1 + ac))
+		while (av[i][j] && k < len1)
 		{
 			*(arr + k) = av[i][j];
 			k++;
