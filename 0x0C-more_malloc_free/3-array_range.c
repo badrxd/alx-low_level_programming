@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 	if (!ptr)
 	{
 		free(ptr);
-		return (NULL);
+		exit (0);
 	}
 	for (i = min; i <= max; i++)
 	{
