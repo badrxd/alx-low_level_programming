@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* malloc_checked - fun
+* string_nconcat - fun
 * @b: value
 *
 * Return: ptr
 */
-void *malloc_checked(unsigned int b)
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 {
 	void *ptr = malloc(b);
 	if (!ptr)
