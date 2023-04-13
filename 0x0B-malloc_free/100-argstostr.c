@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		j = 0;
-		while (av[i][j] && k < (len1 + ac))
+		while (av[i][j] && k <= (len1 + ac))
 		{
 			*(arr + k) = av[i][j];
 			k++;
