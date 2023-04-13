@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* malloc_checked - fun
-* @b: value
-*
+* array_range - fun
+* @min: value
+* @max: value
 * Return: ptr
 */
 int *array_range(int min, int max)
@@ -11,12 +11,14 @@ int *array_range(int min, int max)
 	int *ptr, i;
 
 	if (min > max)
-		return NULL;
-	ptr = malloc(sizeof *ptr * max + 1);
+	{
+		return (NULL);
+	}
+	ptr = malloc(sizeof(int) * max + 1);
 	if (!ptr)
 	{
 		free(ptr);
-		return NULL;
+		return (NULL);
 	}
 	for (i = min; i <= max; i++)
 	{
