@@ -41,6 +41,7 @@ char *argstostr(int ac, char **av)
 		arr[k] = '\n';
 		k++;
 	}
+	arr[k] = '\0';
 	return (arr);
 }
 
