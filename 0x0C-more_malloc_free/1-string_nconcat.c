@@ -27,7 +27,7 @@ unsigned int calc_len(char *st)
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, len1;
+	unsigned int i, j, len1;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -41,7 +41,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(len1 + 1);
 	if (!ptr)
 	{
-		free(ptr);
 		return (NULL);
 	}
 	j = 0;
