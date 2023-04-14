@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-* string_nconcat - fun
-* @s1: value
-* @s2: value
-* @n: value
+* _calloc - fun
+* @nmemb: value
+* @size: value
 *
 *Return: ptr
 */
@@ -19,7 +18,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	ptr = malloc(sum + 1);
 	if (!ptr)
 	{
-		free(ptr);
 		return (NULL);
 	}
 	for (i = 0; i < sum ; i++)
