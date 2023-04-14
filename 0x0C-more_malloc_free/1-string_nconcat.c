@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 	j = 0;
-	for (i = 0 ; i < len1 ; i++)
+	for (i = 0 ; i < len1 ;)
 	{
 		while (s1[j] != '\0')
 		{
@@ -54,7 +54,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 			continue;
 		}
-	ptr[i] = s2[i - j];
+		ptr[i] = s2[i - j];
+		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
