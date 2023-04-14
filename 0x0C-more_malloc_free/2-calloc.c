@@ -10,13 +10,13 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i, sum;
-	char *ptr;
+	void *ptr;
 
 	sum = nmemb * size;
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	ptr = malloc(sum + 1);
-	if (!ptr)
+	ptr = malloc(sum);
+	if (ptr == NULL)
 	{
 		return (NULL);
 	}
@@ -24,6 +24,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		ptr[i] = 0;
 	}
-	ptr[i] = '\0';
 	return (ptr);
 }
