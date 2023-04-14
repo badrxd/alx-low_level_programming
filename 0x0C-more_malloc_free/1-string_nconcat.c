@@ -5,9 +5,9 @@
 * @st: value
 * Return: i
 */
-int calc_len(char *st)
+unsigned int calc_len(char *st)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while (st[i])
