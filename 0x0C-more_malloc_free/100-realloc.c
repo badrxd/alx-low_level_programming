@@ -22,12 +22,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	ptr2 = (malloc(new_size * sizeof(ptr)));
 
-	if (new_size > old_size || ptr == NULL)
+	if (new_size > old_size)
 	{
 		for (i = 0 ; i < old_size ; i++)
 		{
 			if (ptr == NULL)
-				return (ptr2);
+				break;
 			((char *)ptr2)[i] = ((char *)ptr)[i];
 		}
 	}
