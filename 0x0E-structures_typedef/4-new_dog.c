@@ -1,10 +1,19 @@
 #include "dog.h"
-/***/
+#include <stdio.h>
 
-dog_t *new_dog(char *name, float age, char *owner)
+/**
+* print_dog - fun
+* @d: variable
+*
+* Return: ptr
+*/
+
+void print_dog(struct dog *d)
 {
-
-
-
-
+	if (d)
+	{
+		printf("Name: %s\n", d->name ? d->name : "(nil)");
+		printf("Age: %f\n", d->age);
+		printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
+	}
 }
