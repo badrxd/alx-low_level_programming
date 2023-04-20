@@ -1,15 +1,16 @@
 #include "3-calc.h"
+#include <stdio.h>
 /**
-* main - fun
-* @argc: len
-* @argv: arr
-*
-* Return: 0
-*/
+ * main - calculator
+ * @argc: size of argv
+ * @argv: array of argumants
+ *
+ * Return: result.
+ */
 
 int main(int argc, char *argv[])
 {
-	int val1, val2;
+	int num1, num2;
 
 	if (argc != 4)
 	{
@@ -17,12 +18,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	val1 = atoi(argv[1]);
-	val2 = atoi(argv[3]);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	if (get_op_func(argv[2]))
 	{
-		printf("%d\n", get_op_func(argv[2])(val1, val2));
+		printf("%d\n", get_op_func(argv[2])(num1, num2));
 	}
 	else
 	{
