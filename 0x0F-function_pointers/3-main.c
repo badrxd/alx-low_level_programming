@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 	return (0);
 }
