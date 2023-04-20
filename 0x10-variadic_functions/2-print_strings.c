@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
-* print_numbers - fun
+* print_strings - fun
 * @separator: val
 * @n: val
 *
