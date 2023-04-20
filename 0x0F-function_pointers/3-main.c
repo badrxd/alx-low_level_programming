@@ -9,8 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int val1, val2, result;
-	char *operator;
+	int val1, val2;
 
 	if (argc != 4)
 	{
@@ -20,12 +19,10 @@ int main(int argc, char *argv[])
 
 	val1 = atoi(argv[1]);
 	val2 = atoi(argv[3]);
-	operator = argv[2];
 
-	if (get_op_func(operator))
+	if (get_op_func(argv[2]))
 	{
-		result = get_op_func(operator)(val1, val2);
-		printf("%d\n", result);
+		printf("%d\n", get_op_func(argv[2])(val1, val2));
 	}
 	else
 	{
