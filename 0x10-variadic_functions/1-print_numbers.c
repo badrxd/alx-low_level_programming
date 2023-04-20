@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdio.h>
 /**
 * print_numbers - fun
 * @separator: val
@@ -21,9 +22,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		num1 = va_arg(lis, int);
 		printf("%d", num1);
-		if (i < n - 1 && separator != NULL)
+		if (i < (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	va_end(lis);
-	return (num1);
+	printf("\n");
 }
