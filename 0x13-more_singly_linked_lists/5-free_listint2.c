@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 - Frees a linked list and sets the head of the pointer to NULL.
+ * free_listint2 - Frees a linked list and sets the hea pointer to NULL.
  *
  * @head: A pointer to the head of the linked list.
  */
