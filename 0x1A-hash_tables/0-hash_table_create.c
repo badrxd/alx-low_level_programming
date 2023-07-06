@@ -20,6 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
+	tb->size = size;
 	tb->array =  malloc(sizeof(hash_node_t *) * size);
 
 	if (!tb->array)
@@ -27,8 +28,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		fprintf(stderr, "Error: malloc failed\n");
 		return (NULL);
 	}
-
-	tb->size = size;
 
 	for (i = 0; i < size; i++)
 	{
