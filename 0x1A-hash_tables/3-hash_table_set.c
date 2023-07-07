@@ -83,7 +83,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		node = node->next;
 	}
-	if (ht->array[index] == NULL)
+	if (node == NULL)
 	{
 		node = creat_node(key, value);
 		if (!node)
