@@ -67,13 +67,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht->array[index] == NULL)
 	{
-		adds_an_element(ht, key, value, index);
-		return (1);
+		return (adds_an_element(ht, key, value, index));
 	}
 	else
 	{
-		printf("problem");
-		return (0);
-	}
+		hash_node_t *node = creat_node(key, value);
 
+		if (!node)
+			return (0);
+		node->next = ht->array[index];
+		ht->array[index] = node;
+		return (1);
+	}
 }
