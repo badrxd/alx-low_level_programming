@@ -59,24 +59,38 @@ int adds_an_element(hash_table_t *ht, const char *key, const char *value,
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+	hash_node_t *node;
 
 	if (key == NULL || ht == NULL)
 		return (0);
-
 	index = key_index((unsigned char *)key, ht->size);
-
 	if (ht->array[index] == NULL)
 	{
 		return (adds_an_element(ht, key, value, index));
 	}
-	else
+	node = ht->array[index];
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			if (strcmp(node->value, value) == 0)
+				return (1);
+			free(node->value);
+			node->value = malloc(strlen(value) + 1);
+			if (node->value == NULL)
+				return (0);
+			strcpy(node->value, value);
+		}
+		node = node->next;
+	}
+	if (ht->array[index] == NULL)
 	{
 		hash_node_t *node = creat_node(key, value);
-
 		if (!node)
 			return (0);
 		node->next = ht->array[index];
 		ht->array[index] = node;
 		return (1);
 	}
+	return (0);
 }
