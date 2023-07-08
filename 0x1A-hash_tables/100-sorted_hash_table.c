@@ -11,9 +11,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 	unsigned long int i;
 	shash_table_t *tb = malloc(sizeof(shash_table_t));
 
-	if (!tb)
+	if (tb == NULL)
 		return (NULL);
 	tb->size = size;
+	ht->shead = NULL;
+	ht->stail = NULL;
 	tb->array = malloc(sizeof(shash_table_t *) * size);
 	if (!tb->array)
 	{
