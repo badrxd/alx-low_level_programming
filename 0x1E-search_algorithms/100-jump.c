@@ -43,7 +43,7 @@ int jump_search(int *array, size_t size, int value)
 
 	for (i = start; i <= end && i < cast_sz; i++)
 	{
-		_print(array, start);
+		_print(array, i);
 		if (array[i] == value)
 		{
 			return (i);
