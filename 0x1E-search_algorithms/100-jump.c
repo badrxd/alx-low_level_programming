@@ -28,7 +28,8 @@ int jump_search(int *array, size_t size, int value)
 	cast_sz = (int)size;
 	start = 0;
 	end = sqrt(size);
-
+	if (array == NULL)
+		return (-1);
 	_print(array, start);
 	while (value > array[end] && start < cast_sz - 1)
 	{
