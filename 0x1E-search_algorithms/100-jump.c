@@ -35,7 +35,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		start = end;
 		if (end > cast_sz - 1)
-			end = cast_sz;
+			end = cast_sz - 1;
 		else
 			end = end + sqrt(size);
 		_print(array, start);
