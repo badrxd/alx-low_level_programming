@@ -11,10 +11,9 @@
  */
 
 int _search(int *array, int low, int high, int value)
-{
-	size_t pos;
 
-	pos = low + (((double)(high - low) /
+{
+	size_t pos = low + (((double)(high - low) /
 	(array[high] - array[low])) * (value - array[low]));
 
 	if ((int)pos > high)
@@ -22,23 +21,19 @@ int _search(int *array, int low, int high, int value)
 		printf("Value checked array[%ld] is out of range\n", pos);
 		return (-1);
 	}
-
-	printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-	if (value == array[pos])
+	if (low <= high)
 	{
-		return (pos);
+		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
+		if (array[pos] > value)
+			return (_search(array, 0, pos - 1, value));
+		else if (array[pos] < value)
+			return (_search(array, pos + 1, high, value));
+		else if (array[pos] == value)
+			return (pos);
 	}
-	if (value > array[pos])
-	{
-		return (_search(array, pos - 1, high, value));
-	}
-	if (value < array[pos])
-	{
-		return (_search(array, pos + 1, high, value));
-	}
-
 	return (-1);
 }
+
 
 /**
  * interpolation_search - search function type interpolation search
