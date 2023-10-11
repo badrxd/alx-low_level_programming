@@ -23,15 +23,18 @@ int _search(int *array, int low, int high, int value)
 		return (-1);
 	}
 
-	if (value == array[low])
+	printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
+	if (value == array[pos])
 	{
-		return (low);
+		return (pos);
 	}
-
-	if (value > array[low])
+	if (value > array[pos])
 	{
-		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-		return (_search(array, pos, high, value));
+		return (_search(array, pos - 1, high, value));
+	}
+	if (value < array[pos])
+	{
+		return (_search(array, pos + 1, high, value));
 	}
 
 	return (-1);
