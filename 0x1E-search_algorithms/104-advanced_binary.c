@@ -34,7 +34,7 @@ void print_arr(int *array, int left, int right)
  */
 int search(int *array, int left, int right, int value)
 {
-	int mdl;
+	int mdl, i;
 
 	mdl = left + (right - left) / 2;
 	if (left > right)
