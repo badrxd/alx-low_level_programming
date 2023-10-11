@@ -71,5 +71,7 @@ int search(int *array, int left, int right, int value)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
+	if (!array)
+		return (-1);
 	return (search(array, 0, (int)size - 1, value));
 }
