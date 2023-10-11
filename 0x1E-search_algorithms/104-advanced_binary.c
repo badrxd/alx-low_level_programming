@@ -42,9 +42,6 @@ int search(int *array, int left, int right, int value)
 	print_arr(array, left, right);
 	if (array[mdl] == value)
 	{
-		if (array[0] == value)
-			return (0);
-
 		if (array[mdl - 1] == value)
 			return (search(array, left, mdl, value));
 		else
@@ -70,7 +67,7 @@ int search(int *array, int left, int right, int value)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (!array)
+	if (!array || !value)
 		return (-1);
 	return (search(array, 0, (int)size - 1, value));
 }
