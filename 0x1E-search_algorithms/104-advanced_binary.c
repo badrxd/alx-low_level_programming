@@ -42,14 +42,13 @@ int search(int *array, int left, int right, int value)
 	print_arr(array, left, right);
 	if (array[mdl] == value)
 	{
+		if (array[0] == value)
+			return (0);
+
 		if (array[mdl - 1] == value)
-		{
 			return (search(array, left, mdl, value));
-		}
 		else
-		{
 			return (mdl);
-		}
 	}
 	else if (array[mdl] > value)
 	{
